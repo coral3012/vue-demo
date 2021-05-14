@@ -7,26 +7,39 @@
     <router-view/>
   </div>
 </template>
+<script>
+export default{
+  name:'APP',
+  data(){
+    return {
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+    }
+  },
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+</script>
+<style lang="scss">
+html,
+body,
+#app {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 13.3333333333333333vw;
+  /* 1vw = 3.75px
+       26.666667vw / 2 = 13.333333vw
+    */
+}
+#app {
+  display: flex;
+  font-size: 13.3333333333333333vw;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+  overflow-y: auto;
 }
 </style>
